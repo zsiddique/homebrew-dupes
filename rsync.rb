@@ -5,9 +5,14 @@ class Rsync < Formula
   url 'http://rsync.samba.org/ftp/rsync/src/rsync-3.0.9.tar.gz'
   md5 '5ee72266fe2c1822333c407e1761b92b'
 
+  depends_on 'autoconf' => :build if MacOS.xcode_version.to_f >= 4.3
+
   def patches
-    base = "http://gitweb.samba.org/?p=rsync-patches.git;a=blob_plain;hb=v3.0.9;f="
-    ["#{base}fileflags.diff", "#{base}crtimes.diff", "#{base}hfs-compression.diff"]
+    %W[
+      http://gitweb.samba.org/?p=rsync-patches.git;a=blob_plain;hb=v3.0.9;f=fileflags.diff
+      http://gitweb.samba.org/?p=rsync-patches.git;a=blob_plain;hb=v3.0.9;f=crtimes.diff
+      http://gitweb.samba.org/?p=rsync-patches.git;a=blob_plain;hb=v3.0.9;f=hfs-compression.diff
+    ]
   end
 
   def install
