@@ -1,9 +1,9 @@
 require 'formula'
 
 class Zlib < Formula
-  url 'http://zlib.net/zlib-1.2.6.tar.gz'
   homepage 'http://www.zlib.net/'
-  md5 '618e944d7c7cd6521551e30b32322f4a'
+  url 'http://zlib.net/zlib-1.2.7.tar.gz'
+  md5 '60df6a37c56e7c1366cca812414f7b85'
 
   keg_only :provided_by_osx
 
