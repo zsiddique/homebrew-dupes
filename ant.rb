@@ -1,9 +1,9 @@
 require 'formula'
 
 class Ant < Formula
-  url 'http://www.apache.org/dyn/closer.cgi/ant/binaries/apache-ant-1.8.3-bin.tar.gz'
   homepage 'http://ant.apache.org/'
-  md5 'd13be81f715c51ce3e13a7149fd92765'
+  url 'http://www.apache.org/dyn/closer.cgi/ant/binaries/apache-ant-1.8.4-bin.tar.gz'
+  md5 'f5975145d90efbbafdcabece600f716b'
 
   def install
     rm Dir['bin/*.{bat,cmd,dll,exe}']
