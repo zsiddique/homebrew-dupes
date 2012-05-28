@@ -12,7 +12,7 @@ class Openssh < Formula
 
   def patches
     if ARGV.include? '--with-hpn'
-      'http://www.psc.edu/networking/projects/hpn-ssh/openssh-5.9p1-hpn13v12.diff.gz'
+      'http://www.psc.edu/index.php/component/remository/func-download/596/chk,43adcff0c6e7f7bd58b8025e6489d1a9/no_html,1/'
     end
   end
 
