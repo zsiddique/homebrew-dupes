@@ -1,9 +1,9 @@
 require 'formula'
 
 class Libarchive < Formula
-  url 'http://libarchive.googlecode.com/files/libarchive-2.8.3.tar.gz'
+  url 'https://github.com/downloads/libarchive/libarchive/libarchive-3.0.4.tar.gz'
   homepage 'http://code.google.com/p/libarchive/'
-  md5 'fe8d917e101d4b37580124030842a1d0'
+  md5 'af443ca9a10ddbcbf00f7ae34ca7fc16'
 
   def install
     system "./configure", "--prefix=#{prefix}"
