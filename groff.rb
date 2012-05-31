@@ -8,6 +8,7 @@ class Groff < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}", "--without-x"
+    system "make" # Separate steps required
     system "make install"
   end
 end
