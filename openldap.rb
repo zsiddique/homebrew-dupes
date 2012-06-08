@@ -14,8 +14,7 @@ class Openldap < Formula
   end
 
   def install
-    args = ["--disable-debug", "--disable-dependency-tracking",
-            "--prefix=#{prefix}"]
+    args = ["--disable-dependency-tracking", "--prefix=#{prefix}"]
 
     args << "--enable-bdb=no" unless ARGV.include? "--with-berkeley-db"
     args << "--enable-hdb=no" unless ARGV.include? "--with-berkeley-db"
