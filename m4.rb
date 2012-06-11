@@ -6,10 +6,7 @@ class M4 < Formula
   mirror 'http://ftp.gnu.org/gnu/m4/m4-1.4.16.tar.bz2'
   md5 '8a7cef47fecab6272eb86a6be6363b2f'
 
-  keg_only <<-EOS.undent
-    In order to prevent conflicts with the system-provided m4, this formula
-    is keg-only.
-  EOS
+  keg_only :provided_by_osx
 
   def install
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"

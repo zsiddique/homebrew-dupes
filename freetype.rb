@@ -1,8 +1,8 @@
 require 'formula'
 
 class Freetype < Formula
-  url 'http://download.savannah.gnu.org/releases/freetype/freetype-2.3.12.tar.gz'
   homepage 'http://freetype.sourceforge.net'
+  url 'http://download.savannah.gnu.org/releases/freetype/freetype-2.3.12.tar.gz'
   md5 '6fc690d9b34154b51a919ff466cea90c'
 
   def options
@@ -18,7 +18,7 @@ class Freetype < Formula
           "#define TT_CONFIG_OPTION_BYTECODE_INTERPRETER"
     end
 
-    system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking"
+    system "./configure", "--prefix=#{prefix}"
     system "make install"
   end
 end

@@ -9,10 +9,6 @@ class Perl < Formula
     [['--use-threads', 'Enable perl threads']]
   end
 
-  def threads?
-      ARGV.include? '--use-threads'
-  end
-
   def install
     system("rm -f config.sh Policy.sh")
     args = [
@@ -23,18 +19,19 @@ class Perl < Formula
         '-Duseshrplib',
         '-Duselargefiles',
     ]
-    if threads?
-        args << '-Dusethreads'
-    end
+
+    args << '-Dusethreads' if ARGV.include? '--use-threads'
+
     system './Configure', *args
     system "make"
     system "make test"
     system "make install"
   end
 
-  def caveats; <<-EOS.undent
-      Builds without threads by default.  Use --use-threads to build with
-      threads.
+  def caveats
+    unless ARGV.include? '--use-threads' then <<-EOS.undent
+      Builds without threads by default. Use --use-threads to build with threads.
       EOS
+    end
   end
 end

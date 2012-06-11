@@ -9,8 +9,9 @@ class Make < Formula
   keg_only :provided_by_osx
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
-    system "/usr/bin/gnumake install"
+    system "make install"
   end
 end

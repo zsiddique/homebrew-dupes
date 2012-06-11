@@ -8,7 +8,8 @@ class Httpd < Formula
   skip_clean :all
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--mandir=#{man}",
                           "--enable-layout=GNU",

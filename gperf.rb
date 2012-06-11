@@ -14,6 +14,6 @@ class Gperf < Formula
   end
 
   def test
-    system "#{bin}/gperf --version"
+    system "#{bin}/gperf", "--version"
   end
 end
