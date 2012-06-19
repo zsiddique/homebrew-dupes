@@ -2,14 +2,15 @@ require 'formula'
 
 # "File" is a reserved class name
 class FileFormula < Formula
-  url 'ftp://ftp.astron.com/pub/file/file-5.08.tar.gz'
   homepage 'http://www.darwinsys.com/file/'
-  md5 '6a2a263c20278f01fe3bb0f720b27d4e'
+  url 'ftp://ftp.astron.com/pub/file/file-5.11.tar.gz'
+  sha1 'df8ffe8759ec8cd85a98dc98e858563ea2555f64'
   head 'https://github.com/glensc/file.git'
 
   def install
     system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--enable-fsect-man5"
     system "make install"
   end
 end
