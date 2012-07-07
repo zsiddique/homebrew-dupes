@@ -6,6 +6,7 @@ class Grep < Formula
   mirror 'http://ftp.gnu.org/gnu/grep/grep-2.13.tar.xz'
   sha256 '461718cbd3f471cfd4c167aa7c31be72d9c18760b88186b5e0d1ab8345022dd0'
 
+  depends_on 'xz' => :build
   depends_on 'pcre'
 
   def install
