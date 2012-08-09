@@ -9,6 +9,8 @@ class Screen < Formula
 
   head 'git://git.savannah.gnu.org/screen.git', :branch => 'master'
 
+  depends_on :autoconf
+
   def patches
     "http://trac.macports.org/raw-attachment/ticket/20862/screen-4.0.3-snowleopard.patch"
   end unless ARGV.build_head?
