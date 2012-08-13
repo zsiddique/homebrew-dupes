@@ -6,13 +6,11 @@ class Tcl < Formula
   md5 '8512d8db3233041dd68a81476906012a'
   version '8.5.9'
 
-  def options
-    [['--enable-threads', 'Build with multithreading support']]
-  end
+  option 'enable-threads', 'Build with multithreading support'
 
   def install
     args = ["--prefix=#{prefix}", "--mandir=#{man}"]
-    args << "--enable-threads" if ARGV.include? "--enable-threads"
+    args << "--enable-threads" if build.include? "enable-threads"
     args << "--enable-64bit" if MacOS.prefer_64_bit?
 
     cd 'unix' do
