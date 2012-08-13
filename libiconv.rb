@@ -8,6 +8,8 @@ class Libiconv < Formula
 
   keg_only :provided_by_osx
 
+  option :universal
+
   def patches
     { :p1 => [
       'https://trac.macports.org/export/89276/trunk/dports/textproc/libiconv/files/patch-Makefile.devel',
@@ -16,12 +18,8 @@ class Libiconv < Formula
     ]}
   end
 
-  def options
-    [[ '--universal', 'Build a universal library.']]
-  end
-
   def install
-    ENV.universal_binary if ARGV.build_universal?
+    ENV.universal_binary if build.universal?
     ENV.j1
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
