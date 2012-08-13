@@ -6,12 +6,10 @@ class Openssh < Formula
   sha1 'ac4e0055421e9543f0af5da607a72cf5922dcc56'
   version '5.9p1'
 
-  def options
-    [['--with-hpn', 'Use high performance patches']]
-  end
+  option 'with-hpn', 'Use high performance patches'
 
   def patches
-    if ARGV.include? '--with-hpn'
+    if build.include? 'with-hpn'
       'http://www.psc.edu/index.php/component/remository/func-download/596/chk,43adcff0c6e7f7bd58b8025e6489d1a9/no_html,1/'
     end
   end
