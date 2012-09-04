@@ -13,10 +13,10 @@ class Screen < Formula
 
   def patches
     "http://trac.macports.org/raw-attachment/ticket/20862/screen-4.0.3-snowleopard.patch"
-  end unless ARGV.build_head?
+  end unless build.head?
 
   def install
-    if ARGV.build_head?
+    if build.head?
       cd 'src' do
         system "autoconf"
         system "autoheader"
