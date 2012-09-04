@@ -3,8 +3,8 @@ require 'formula'
 class Tcl < Formula
   homepage 'http://www.tcl.tk/'
   url 'http://sourceforge.net/projects/tcl/files/Tcl/8.5.9/tcl8.5.9-src.tar.gz'
-  md5 '8512d8db3233041dd68a81476906012a'
   version '8.5.9'
+  sha1 'ae87c5e58ba20760d9bc77117d219bbf1b6a5557'
 
   option 'enable-threads', 'Build with multithreading support'
 

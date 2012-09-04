@@ -3,8 +3,8 @@ require 'formula'
 class Tk < Formula
   homepage 'http://www.tcl.tk/'
   url 'http://sourceforge.net/projects/tcl/files/Tcl/8.5.9/tk8.5.9-src.tar.gz'
-  md5 '7cdeb9feb61593f58a0ae61f2497580e'
   version '8.5.9'
+  sha1 '161a133e0b653d5fdf6fcff47bdbf768d73f3238'
 
   # must use a Homebrew-built Tcl since versions must match
   depends_on 'tcl'

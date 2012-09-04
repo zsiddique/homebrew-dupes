@@ -3,7 +3,7 @@ require 'formula'
 class Perl < Formula
   homepage 'http://www.perl.org/'
   url 'http://www.cpan.org/src/5.0/perl-5.14.2.tar.gz'
-  md5 '3306fbaf976dcebdcd49b2ac0be00eb9'
+  sha1 'df1549d65cdef2b20023af83ecaa2a024109a5ad'
 
   option 'use-threads', 'Enable Perl threads'
 
