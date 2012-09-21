@@ -20,9 +20,6 @@ class AppleGcc42 < Formula
   version '4.2.1-5666.3'
   sha1 '8fadde2a159082d6474fe9e325b6301e3c0bc84f'
 
-  # Don't strip compiler binaries.
-  skip_clean :all
-
   def install
     unless MacOS.version >= :lion
       onoe <<-EOS.undent
