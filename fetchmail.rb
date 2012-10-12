@@ -8,7 +8,7 @@ class Fetchmail < Formula
   depends_on 'xz' => :build
 
   def install
-    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"
+    system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}", "--with-ssl"
     system "make install"
   end
 end
