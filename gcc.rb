@@ -30,6 +30,7 @@ class Gcc < Formula
   option 'enable-all-languages', 'Enable all compilers and languages, except Ada'
   option 'enable-nls', 'Build with native language support'
   option 'enable-profiled-build', 'Make use of profile guided optimization when bootstrapping GCC'
+  option 'enable-multilib', 'Build with multilib support'
 
   fails_with :clang do
     build 421
@@ -85,8 +86,7 @@ class Gcc < Formula
       "--with-system-zlib",
       "--enable-stage1-checking",
       "--enable-plugin",
-      "--enable-lto",
-      "--disable-multilib"
+      "--enable-lto"
     ]
 
     args << '--disable-nls' unless build.include? 'enable-nls'
@@ -117,6 +117,12 @@ class Gcc < Formula
         # named ecj.jar and not ecj-version.jar in order for this to happen.
         mv "ecj-#{ecj.version}.jar", (source_dir + 'ecj.jar')
       end
+    end
+
+    if build.include? 'enable-multilib'
+      args << '--enable-multilib'
+    else
+      args << '--disable-multilib'
     end
 
     mkdir 'build' do
