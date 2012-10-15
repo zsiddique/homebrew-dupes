@@ -28,7 +28,7 @@ class Gcc < Formula
   option 'enable-objc', 'Enable Objective-C language support'
   option 'enable-objcxx', 'Enable Objective-C++ language support'
   option 'enable-all-languages', 'Enable all compilers and languages, except Ada'
-  option 'enable-nls', 'Build with natural language support'
+  option 'enable-nls', 'Build with native language support'
   option 'enable-profiled-build', 'Make use of profile guided optimization when bootstrapping GCC'
 
   fails_with :clang do
