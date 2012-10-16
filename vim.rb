@@ -37,4 +37,10 @@ class Vim < Formula
     # we still want to install it in the Cellar location.
     system "make", "install", "prefix=#{prefix}"
   end
+
+  def caveats; <<-EOS.undent
+    vim currently does not support Ruby 1.9. Please ensure that the
+    system Ruby (1.8.7) is first in your PATH before installing.
+    EOS
+  end
 end
