@@ -39,8 +39,9 @@ class Vim < Formula
   end
 
   def caveats; <<-EOS.undent
-    vim currently does not support Ruby 1.9. Please ensure that the
-    system Ruby (1.8.7) is first in your PATH before installing.
+    vim currently does not support Ruby 1.9. Please ensure that the system
+    Ruby libraries are picked up before any others by temporarily unlinking
+    any Homebrew-built Ruby.
     EOS
   end
 end
