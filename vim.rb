@@ -29,7 +29,6 @@ class Vim < Formula
                           "--enable-pythoninterp",
                           "--enable-rubyinterp",
                           "--enable-cscope",
-                          "--with-ruby-command=/usr/bin/ruby",
                           "--with-features=huge"
     system "make"
 
