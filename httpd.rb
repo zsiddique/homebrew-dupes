@@ -8,6 +8,7 @@ class Httpd < Formula
   skip_clean :la
 
   def install
+ENV['LTFLAGS'] = '--tag CC'
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
