@@ -2,8 +2,8 @@ require 'formula'
 
 class Httpd < Formula
   homepage 'http://httpd.apache.org/'
-  url 'http://www.apache.org/dist/httpd/httpd-2.2.22.tar.bz2'
-  sha1 '766cd0843050a8dfb781e48b976f3ba6ebcf8696'
+  url 'http://www.apache.org/dist/httpd/httpd-2.4.3.tar.bz2'
+  sha1 '845ca56816b0352c7759b6b8f47bd012c0864efd'
 
   skip_clean :la
 
