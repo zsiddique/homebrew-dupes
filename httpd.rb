@@ -3,7 +3,7 @@ require 'formula'
 class Httpd < Formula
   homepage 'http://httpd.apache.org/'
   url 'http://www.apache.org/dist/httpd/httpd-2.4.3.tar.bz2'
-  sha1 '845ca56816b0352c7759b6b8f47bd012c0864efd'
+  sha1 '0ef1281bb758add937efe61c345287be2f27f662'
 
   skip_clean :la
 
