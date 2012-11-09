@@ -24,7 +24,6 @@ ENV['LTFLAGS'] = '--tag CC'
                           "--enable-proxy",
                           "--enable-logio",
                           "--enable-deflate",
-                          "--with-included-apr",
                           "--enable-cgi",
                           "--enable-cgid",
                           "--enable-suexec",
